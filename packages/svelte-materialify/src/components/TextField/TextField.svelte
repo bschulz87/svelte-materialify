@@ -87,6 +87,7 @@
         <slot />
       </label>
       <slot name="content" />
+      <slot name="input">
       <!-- keypress Event is deprecated. Use keydown or keyup instead -->
       <input
         type="text"
@@ -107,6 +108,7 @@
         on:keydown
         on:keyup
         {...$$restProps} />
+      </slot>
     </div>
 
     {#if clearable && value !== ''}
